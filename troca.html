@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo dos filmes</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+ 
+ background: url(img/background5.jpg);
+ background-size: cover;
+ background-position: center;
+
+}
+.jogo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;  
+    background-color: rgba(255, 255, 255, 0.362);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 80px;
+    
+    
+}
+
+.jogo p{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.jogo h1{
+    font-size: 40px;
+    font-family:fantasy;
+}
+
+
+
+.jogo input{
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+.jogo button{
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    
+}
+footer{
+    padding: 20px;
+    background-color: rgba(65, 62, 62, 0.342);
+    text-align: center;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+  <header>
+    <center>
+    <a href="home.html">
+    
+      <img style="margin-left: 100px; margin-top: 10px; margin-bottom: -50px;" width="45px"  src="img/home.png" alt="">
+    </a>
+  </center>
+  </header>
+
+    <main>
+        <div class="jogo">
+            <h1>Use a criatividade! </h1>
+            <p><strong id="Filme_1" class="filme">Homem</strong> de Ferro</p>
+            <p>Homem-Aranha: De volta ao <strong id="Filme_2" class="filme">lar</strong></p>
+            <p> O <strong id="Filme_3" class="filme">Incrível </strong> Hulk</p>
+            <p>Guardiões da <strong id="Filme_4" class="filme">Galáxia</strong></p>
+            <p>Homem-Formiga e a <strong id="Filme_5" class="filme">Vespa</strong></p>
+            <p>Planeta dos <strong id="Filme_6" class="filme">macacos</strong></p>
+            <p>Tá chovendo <strong id="Filme_7" class="filme">hambúrguer</strong></p>
+            <p>A menina que roubava <strong id="Filme_8" class="filme">livros</strong></p>
+            <p>O estranho <strong id="Filme_9" class="filme">caso</strong> de Benjamin Button</p>
+            <p>Alice no <strong id="Filme_10" class="filme">país</strong> das maravilhas</p>
+            <br>
+            <input type="text" id="palavra" placeholder="Digite uma palavra"> <br> <button onclick="muda_palavra()">Jogar</button>
+            <br><br>
+        </div>
+        
+    </main>
+    <script>
+        function muda_palavra() {
+            var palavra = document.getElementsByTagName("strong");
+            var nova_palavra = document.getElementById("palavra").value;
+
+            console.log(nova_palavra)
+
+            for (i = 0; 1 < palavra.length; i++) {
+                palavra[i].innerHTML = nova_palavra;
+            }
+        }
+    </script>
+      
+      <footer>
+        Copyright &copy; Todos os direitos reservados  
+      </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+
+</html>

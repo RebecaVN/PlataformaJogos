@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Site de Jogos - Mortal Kombat</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(img/background4.jpeg);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+           
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .game-option {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      cursor: pointer;
+
+    }
+
+    .game-option:hover {
+      background-color: #666;
+    }
+
+    .game-option img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .avbar-brand{
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+
+</head>
+<body>
+  <a href="home.html">
+    <img style="margin-left: 15px;" width="45px" src="img/casa.png" alt="">
+  </a>
+  <h1>VAMOS JOGAR?</h1>
+  <h1>ESCOLHA SEU PERSONAGEM!</h1>
+ 
+  <div class="personagens">
+    <div class="kitana">
+        <img height="200px" src="img/kitana.png" alt="">
+        <h3>Kitana</h3>
+     
+  </div>
+  <div class="kenshi">
+  <img height="200px" src="img/kenshi.png" alt="">
+  <h3>Kenshi</h3>
+
+</div>
+<div class="raiden">
+  <img height="170px" src="img/raidenn.png" alt="">
+  <h3>Raiden</h3>
+
+</div>
+
+  <div class="mileena">
+      <img height="180px" src="img/mileena.png" alt="">
+      <h3>Mileena</h3>
+  </div>  
+</div>
+
+  <h1>ESCOLHA O QUE VAI JOGAR!</h1>
+
+  <div class="game-option" onclick="window.location.href = 'forca.html';">
+    <img src="img/forca.png" alt="Jogo 1">
+    <p style="font-family: 'Righteous', cursive;">FORCA</p>
+    <button>JOGAR</button>
+  </div>
+
+
+  <div class="game-option" onclick="window.location.href = 'jogoDaVelha.html';">
+    <img src="img/velha.png" alt="Jogo 2">
+    <p style="font-family: 'Righteous', cursive;">VELHA</p>
+    <button>JOGAR</button>
+  </div>
+
+
+  <div class="game-option" onclick="window.location.href = 'troca.html';">
+    <img src="img/palavras.png" alt="Jogo 3">
+    <p style="font-family: 'Righteous', cursive;">TROCA DE PALAVRAS</p>
+    <button>JOGAR</button>
+  </div>
+
+  <div class="game-option" onclick="window.location.href = 'jogo.html';">
+    <img src="img/jg.png" alt="Jogo 4">
+    <P style="font-family: 'Righteous', cursive;" >PULAR OBSTÁCULOS</P>
+    <button>JOGAR</button>
+  </div>
+
+  <div class="game-option">
+    <a target="_blank" href="https://chatfake-rebecaviananunes.b4a.run/">
+      <img src="img/chat.png" alt="Jogo 4">
+    </a>
+    <P style="font-family: 'Righteous', cursive;"> CHAT </P>
+    <button>ENTRAR</button>
+  </div>
+  <div class="game-option" onclick="window.location.href = 'pagina_jogo_4.html';">
+    <img src="img/tutorial.png" alt="Jogo 4">
+    <P style=" font-family: 'Righteous', cursive;"> TUTORIAL </P>
+    <button>VER</button>
+  </div>
+
+  <footer>
+    Copyright &copy; Todos os direitos reservados  
+  </footer>
+
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>

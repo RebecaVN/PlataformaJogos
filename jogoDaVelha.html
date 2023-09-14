@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+.jogo {
+
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 6%;
+
+
+}
+
+
+#jogo {
+    width: 603px;
+    height: 603px;
+    border: solid 1px;
+    display: inline-block;
+    background-color: rgba(250, 250, 250, 0.423);
+    cursor: pointer;
+
+
+
+
+
+}
+
+/* 
+#resultado{
+    margin-left: 30px;
+    float: left;
+
+} */
+
+.linha {
+    height: 200px;
+    border-bottom: 1px solid;
+   
+
+
+}
+
+.casa {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid;
+    float: left;
+    display: flex;
+    align-items: center;
+    
+}
+
+#resultado {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    margin-top: 7%;
+    border-radius: 10px;
+    margin-right: 10%;
+    font-size: 20px;
+    height: 100%;
+    font-weight: 600;
+
+}
+
+
+#botao {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+
+#botao:hover {
+    transition: ease-in 600ms;
+    transform: scale(1.02);
+}
+
+footer{
+    padding: 40px;
+    background-color: rgba(65, 62, 62, 0.342);
+    text-align: center;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+      
+    </style>
+ 
+</head>
+    <body onload="recomeca()">
+  <header>
+    <a href="home.html">
+    
+      <img style="margin-left: 100px; margin-top: 10px; margin-bottom: -50px;" width="45px"  src="img/casa.png" alt="">
+    </a>
+  </header>
+      <main class="jogo">
+        <div id="jogo">
+          <div class="linha">
+            <div class="casa" id="casa0" onclick="verifica(0)">
+              <img src="" id="img0" />
+            </div>
+            <div class="casa" id="casa1" onclick="verifica(1)">
+              <img src="" id="img1" />
+            </div>
+            <div class="casa" id="casa2" onclick="verifica(2)">
+              <img src="" id="img2" />
+            </div>
+          </div>
+          <div class="linha">
+            <div class="casa" id="casa3" onclick="verifica(3)">
+              <img src="" id="img3" />
+            </div>
+            <div class="casa" id="casa4" onclick="verifica(4)">
+              <img src="" id="img4" />
+            </div>
+            <div class="casa" id="casa5" onclick="verifica(5)">
+              <img src="" id="img5" />
+            </div>
+          </div>
+          <div class="linha">
+            <div class="casa" id="casa6" onclick="verifica(6)">
+              <img src="" id="img6" />
+            </div>
+            <div  class="casa" id="casa7" onclick="verifica(7)">
+              <img src="" id="img7" />
+            </div>
+            <div class="casa" id="casa8" onclick="verifica(8)">
+              <img src="" id="img8" />
+            </div>
+          </div>
+        </div>
+    
+        <div id="resultado">
+          <p id="resposta">PLACAR:</p>
+          <br />
+          <p id="raiden" class="raiden">Pontos Raiden: 0</p>
+          <p id="subzero" class="subzero">Pontos Subzero: 0</p>
+          <p id="velha" class="velha">Velha: 0</p>
+          <form>
+            <input type="button" id="botao" value="NOVO JOGO" onclick="recomeca()" >
+        </form>
+        </div>
+       
+      </main>
+      <footer>
+        Copyright &copy; Todos os direitos reservados  
+      </footer>
+    
+    
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+      
+    </body>
+    <script src="jscript.js"></script>
+  </html>
+  
